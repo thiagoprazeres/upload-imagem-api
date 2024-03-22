@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
 @RestController
-@CrossOrigin("http://localhost:4200/")
+@CrossOrigin("https://victorious-pond-08fa6e70f.5.azurestaticapps.net")
 public class ImageController {
     public static String UPLOAD_DIRECTORY = System.getProperty("user.dir") + "/image";
 
