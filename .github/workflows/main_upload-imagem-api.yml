@@ -22,6 +22,10 @@ jobs:
           java-version: '17'
 
       - name: Build with Maven
+        env:
+          AZURE_STORAGE_CONNECTION_STRING: $(System.AZURE_STORAGE_CONNECTION_STRING)
+          AZURE_STORAGE_CONTAINER_NAME: $(System.AZURE_STORAGE_CONTAINER_NAME)
+          AZURE_STORAGE_ENDPOINT: $(System.AZURE_STORAGE_ENDPOINT)
         run: mvn clean install
 
       - name: Upload artifact for deployment job
